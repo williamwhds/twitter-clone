@@ -52,16 +52,17 @@
         <!-- parte direita da pagina -->
         <div class="right">
             <div class="right-content">
-                <form class="right-content-form">
-                    <input type="text" class="username" placeholder="Nome de usuário">
+                <form action="entrar.php" method="post" class="right-content-form">
+                    <input type="text" class="username" id="username" name="username" placeholder="Nome de usuário">
 
                     <div>
-                        <input type="password" class="password" placeholder="Senha">
+                        <input type="password" class="password" id="password" name="password" placeholder="Senha">
                         <label>Esqueceu sua senha?</label>
                     </div>
 
-                    <button type="button" class="btn-top">Entrar</button>
+                    <button type="submit" class="btn-top">Entrar</button>
                 </form>
+
 
                 <div class="middle-content">
                     <i class="fas fa-globe-americas"></i>
@@ -78,9 +79,9 @@
                 <span class="popup-close" id="popup-close">&times;</span>
                 <h2>Criar conta</h2>
                 <form action="cadastrar.php" method="post">
-                    <input type="text" class="username" id="username-sign-up" placeholder="Nome de usuário">
-                    <input type="password" class="password" id="password-sign-up" placeholder="Senha">
-                    <button type="button" class="sign-up">Criar conta</button>
+                    <input type="text" class="username" name="username" id="username" placeholder="Nome de usuário">
+                    <input type="password" class="password" name="password" id="password" placeholder="Senha">
+                    <button type="submit" class="sign-up">Criar conta</button>
                 </form>
             </div>
         </div>
