@@ -79,6 +79,7 @@
                 <span class="popup-close" id="popup-close">&times;</span>
                 <h2>Criar conta</h2>
                 <form action="cadastrar.php" method="post">
+                    <input type="text" class="username" name="name" id="name" placeholder="Nome">
                     <input type="text" class="username" name="username" id="username" placeholder="Nome de usuário">
                     <input type="password" class="password" name="password" id="password" placeholder="Senha">
                     <button type="submit" class="sign-up">Criar conta</button>
