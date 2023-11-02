@@ -11,9 +11,10 @@ $sql = "INSERT INTO usuarios VALUES (null, '".$username."', '".$password."', '".
 try {
   if ($conn->query($sql)) {
       echo "Registro inserido com sucesso! Bem vindo ".$username."!";
-  }
+      header('location: ../index.php?criou=1');   // Retornando pro index.php com uma variável GET.
+  }                                               // Exibir pro usuário que a conta foi criada
 } catch(Exception $e) {
-  echo $e->getMessage();
+  echo "Erro: ".$e->getMessage();
 }
 
 $conn->close();
