@@ -22,7 +22,7 @@
     />
 
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
@@ -52,7 +52,7 @@
         <!-- parte direita da pagina -->
         <div class="right">
             <div class="right-content">
-                <form action="entrar.php" method="post" class="right-content-form">
+                <form action="php/entrar.php" method="post" class="right-content-form">
                     <input type="text" class="username" id="username" name="username" placeholder="Nome de usuário">
 
                     <div>
@@ -78,7 +78,7 @@
             <div class="sign-up-popup-content">
                 <span class="popup-close" id="popup-close">&times;</span>
                 <h2>Criar conta</h2>
-                <form action="cadastrar.php" method="post">
+                <form action="php/cadastrar.php" method="post">
                     <input type="text" class="username" name="name" id="name" placeholder="Nome">
                     <input type="text" class="username" name="username" id="username" placeholder="Nome de usuário">
                     <input type="password" class="password" name="password" id="password" placeholder="Senha">
@@ -86,7 +86,7 @@
                 </form>
             </div>
         </div>
-        <script src="/scripts/signup-popup.js"></script>
+        <script src="js/signup-popup.js"></script>
 
         <!-- rodapé -->
         <footer class="main-page-footer">
