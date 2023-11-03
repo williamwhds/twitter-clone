@@ -26,7 +26,33 @@
 
 </head>
 <body>
-    <!--pagina-princial-->
+    <!-- popup de conta criada -->
+    <?php
+    // se usuário criou a conta com sucesso
+    if (isset($_GET['criou']) && $_GET['criou'] == 1) {
+        echo '
+                <div class="account-made-popup" id="account-made-popup">
+                    <div class="account-made-popup-content">
+                        <h2>Conta criada com sucesso!</h2>
+                        <h2>Tente entrar agora! 😊</h2>
+                    </div>
+                </div>
+                <script src="js/account-made-popup.js"></script>
+             ';
+    } else if (isset($_GET['criou']) && $_GET['criou'] == 0) {
+        echo '
+                <div class="account-made-popup" id="account-made-popup">
+                    <div class="account-made-popup-content">
+                        <h2>Occoreu um erro!</h2>
+                        <h2>'.$_GET['msgErro'].'</h2>
+                    </div>
+                </div>
+                <script src="js/account-made-popup.js"></script>
+             ';
+    }
+    ?>
+
+    <!-- pagina principal -->
     <section class="main-page">
         <!-- parte esquerda da pagina -->
         <div class="left">
@@ -79,7 +105,7 @@
                 <span class="popup-close" id="popup-close">&times;</span>
                 <h2>Criar conta</h2>
                 <form action="./php/cadastrar.php" method="post">
-                    <input type="text" class="username" name="name" id="name" placeholder="Nome">
+                    <input type="text" class="name" name="name" id="name" placeholder="Nome">
                     <input type="text" class="username" name="username" id="username" placeholder="Nome de usuário">
                     <input type="password" class="password" name="password" id="password" placeholder="Senha">
                     <button type="submit" class="sign-up">Criar conta</button>

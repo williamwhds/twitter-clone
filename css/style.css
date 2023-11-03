@@ -199,6 +199,32 @@ body {
     color: #444;
     font-weight: 300;
 }
+/*
+    POPUP CONTA CRIADA
+*/
+
+.account-made-popup {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% de opacidade */
+    z-index: 1;
+}
+
+.account-made-popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #2c0d49;
+    border-radius: 2rem;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
 
 /*
     POPUP CADASTRO
@@ -263,8 +289,13 @@ body {
     outline: none;
 }
 
-.sign-up-popup-content .username {
+.sign-up-popup-content .name {
     order: 0;
+}
+
+.sign-up-popup-content .username {
+    margin-top: 10px;
+    order: 1;
 }
 
 .sign-up-popup-content .password {
