@@ -33,18 +33,30 @@
         echo '
                 <div class="account-made-popup" id="account-made-popup">
                     <div class="account-made-popup-content">
-                        <h2>Conta criada com sucesso!</h2>
+                        <h1>Conta criada com sucesso!</h1>
                         <h2>Tente entrar agora! 😊</h2>
                     </div>
                 </div>
                 <script src="js/account-made-popup.js"></script>
              ';
+    // se ocorreu um erro durante a criação de conta
     } else if (isset($_GET['criou']) && $_GET['criou'] == 0) {
         echo '
                 <div class="account-made-popup" id="account-made-popup">
                     <div class="account-made-popup-content">
-                        <h2>Occoreu um erro!</h2>
-                        <h2>'.$_GET['msgErro'].'</h2>
+                        <h1>Occoreu um erro!</h1>
+                        <h2>'.urldecode($_GET['msgErro']).'</h2>
+                    </div>
+                </div>
+                <script src="js/account-made-popup.js"></script>
+             ';
+    // caixa de erro genérica
+    } else if (isset($_GET['msgErro'])) {
+        echo '
+                <div class="account-made-popup" id="account-made-popup">
+                    <div class="account-made-popup-content">
+                        <h1>Atenção ⚠️</h1>
+                        <h2>'.urldecode($_GET['msgErro']).'</h2>
                     </div>
                 </div>
                 <script src="js/account-made-popup.js"></script>
