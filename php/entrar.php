@@ -2,10 +2,10 @@
 // fazer: se ja estiver em sessão, redirecionar
 require 'conexao_db.php';
 
-$username = $_POST["username"];
+$email = $_POST["email"];
 $password = $_POST["password"];
 
-$sql = "SELECT id FROM usuarios WHERE usuario = '$username' AND senha = '$password'";
+$sql = "SELECT id FROM usuarios WHERE usuario = '$email' AND senha = '$password'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // As credenciais são válidas, autenticar o usuário aqui

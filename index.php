@@ -91,7 +91,7 @@
         <div class="right">
             <div class="right-content">
                 <form action="./php/entrar.php" method="post" class="right-content-form">
-                    <input type="text" class="username" id="username" name="username" placeholder="Nome de usuário">
+                    <input type="text" class="username" id="email" name="email" placeholder="Email">
 
                     <div>
                         <input type="password" class="password" id="password" name="password" placeholder="Senha">
@@ -119,6 +119,7 @@
                 <form action="./php/cadastrar.php" method="post">
                     <input type="text" class="name" name="name" id="name" placeholder="Nome">
                     <input type="text" class="username" name="username" id="username" placeholder="Nome de usuário">
+                    <input type="text" class="username" name="email" id="email" placeholder="Email">
                     <input type="password" class="password" name="password" id="password" placeholder="Senha">
                     <button type="submit" class="sign-up">Criar conta</button>
                 </form>
