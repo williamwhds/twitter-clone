@@ -11,11 +11,11 @@ $password = $_POST["password"];
 $sql = "INSERT INTO usuarios VALUES (null, '".$name."', '".$username."', '".$email."', '".$password."')";
 try {
   if ($conn->query($sql)) {
-      header('location: ../index.php?criou=1');   // Retornando pro index.php com uma variável GET.
+      header('location: ../index.php?msg1=Sucesso!&msg2=Sua conta foi criada!');   // Retornando pro index.php com uma variável GET.
   }                                               // Exibir pro usuário que a conta foi criada
 } catch(Exception $e) {
   $msgErro = $e->getMessage();
-  header('location: ../index.php?criou=0&msgErro='.$msgErro); // Exibir que ocorreu um erro
+  header('location: ../index.php?msg1=Erro na criação de conta!&msg2='.$msgErro); // Exibir que ocorreu um erro
 }
 
 $conn->close();

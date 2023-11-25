@@ -26,41 +26,11 @@
 
 </head>
 <body>
-    <!-- popup de conta criada -->
+    <!-- popup -->
     <?php
-    // se usuário criou a conta com sucesso
-    if (isset($_GET['criou']) && $_GET['criou'] == 1) {
-        echo '
-                <div class="account-made-popup" id="account-made-popup">
-                    <div class="account-made-popup-content">
-                        <h1>Conta criada com sucesso!</h1>
-                        <h2>Tente entrar agora! 😊</h2>
-                    </div>
-                </div>
-                <script src="js/account-made-popup.js"></script>
-             ';
-    // se ocorreu um erro durante a criação de conta
-    } else if (isset($_GET['criou']) && $_GET['criou'] == 0) {
-        echo '
-                <div class="account-made-popup" id="account-made-popup">
-                    <div class="account-made-popup-content">
-                        <h1>Occoreu um erro!</h1>
-                        <h2>'.urldecode($_GET['msgErro']).'</h2>
-                    </div>
-                </div>
-                <script src="js/account-made-popup.js"></script>
-             ';
-    // caixa de erro genérica
-    } else if (isset($_GET['msgErro'])) {
-        echo '
-                <div class="account-made-popup" id="account-made-popup">
-                    <div class="account-made-popup-content">
-                        <h1>Atenção ⚠️</h1>
-                        <h2>'.urldecode($_GET['msgErro']).'</h2>
-                    </div>
-                </div>
-                <script src="js/account-made-popup.js"></script>
-             ';
+    require "php/popup.php";
+    if (isset($_GET['msg1']) && isset($_GET['msg2'])) {
+        echo criarPopup(urldecode($_GET['msg1']), urldecode($_GET['msg2']));
     }
     ?>
 
@@ -107,7 +77,6 @@
                     <h1>Descubra o que está acontecendo no mundo</h1>
                     <h4>Inscreva-se hoje</h4>
                     <button type="button" class="sign-up" id="open-sign-up">Criar conta</button>
-                    <button type="button" class="log-in">Entrar</button>
                 </div>
             </div>
         </div>
