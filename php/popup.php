@@ -33,7 +33,7 @@ function criarPopup($msg1, $msg2) {
             height: 55px;
             border-radius: 50px;
             border-style: none;
-            background: #EDA756;
+            background: #2c0d49;
             color: #ffffff;
             font-size: 1.2rem;
             margin: 10px;
