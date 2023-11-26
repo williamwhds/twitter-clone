@@ -204,7 +204,7 @@ body {
     POPUP CADASTRO
 */
 
-.sign-up-popup {
+.popup-front {
     display: none;
     position: fixed;
     top: 0;

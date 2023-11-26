@@ -76,12 +76,12 @@
                     <i class="fas fa-globe-americas"></i>
                     <h1>Descubra o que está acontecendo no mundo</h1>
                     <h4>Inscreva-se hoje</h4>
-                    <button type="button" class="sign-up" id="open-sign-up">Criar conta</button>
+                    <button type="button" class="sign-up" id="open-popup">Criar conta</button>
                 </div>
             </div>
         </div>
 
-        <div class="sign-up-popup" id="sign-up-popup">
+        <div class="popup-front" id="popup-front">
             <div class="sign-up-popup-content">
                 <span class="popup-close" id="popup-close">&times;</span>
                 <h2>Criar conta</h2>
@@ -94,7 +94,7 @@
                 </form>
             </div>
         </div>
-        <script src="js/signup-popup.js"></script>
+        <script src="js/popup.js"></script>
 
         <!-- rodapé -->
         <footer class="main-page-footer">
