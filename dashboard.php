@@ -54,7 +54,7 @@
 
     <h2>🔭 Usuários</h2>
     <ul style="padding-left: 0;">
-      <input class="dashboard-button" placeholder="@usuario">
+      <input class="dashboard-button" placeholder="@usuario" style="cursor: text;">
       <button class='dashboard-button'>🔎 Pesquisar</button>
     </ul>
   </div>
