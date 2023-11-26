@@ -37,6 +37,7 @@ body {
 #tweet-container {
     flex-grow: 1;
     padding: 10px;
+    min-width: 715px;
 }
 
 .tweet {
