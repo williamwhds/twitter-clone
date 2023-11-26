@@ -7,7 +7,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
 	nome VARCHAR(255) NOT NULL,
 	usuario VARCHAR(255) UNIQUE NOT NULL,
 	email VARCHAR(255) UNIQUE NOT NULL,
-	senha VARCHAR(255) NOT NULL
+	senha VARCHAR(255) NOT NULL,
+    url_imagem VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS tweets (
@@ -17,7 +18,7 @@ CREATE TABLE IF NOT EXISTS tweets (
     corpo TEXT NOT NULL,
     tipo_tweet ENUM('tweet', 'comentario', 'retweet') NOT NULL,
     tweet_original_id INT, -- Referência ao tweet original (se for um comentário ou retweet)
-    imagem_path VARCHAR(255), -- Caminho para a imagem, se houver
+    url_imagem VARCHAR(255), -- Caminho para a imagem, se houver
     likes INT DEFAULT 0,
     comentarios INT DEFAULT 0,
     retweets INT DEFAULT 0,

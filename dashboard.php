@@ -22,7 +22,7 @@
     // Verificando se há popup
     require "php/popup.php";
     if (isset($_GET['msg1']) && isset($_GET['msg2'])) {
-        echo criarPopup(urldecode($_GET['msg1']), urldecode($_GET['msg2']));
+        echo criarPopupDark(urldecode($_GET['msg1']), urldecode($_GET['msg2']));
     }
 ?>
 
@@ -56,9 +56,9 @@
       <div class="popup-content">
         <span class="popup-close" id="popup-close">&times;</span>
         <h2>Tweetar</h2>
-          <form class="popup-form" action="./php/tweetar.php" method="post">
-            <textarea rows="5" cols="60" class="dashboard-button" style="width:300px; height:100px; cursor: text;" placeholder="Escreva seu tweet aqui"></textarea>
-            <input style="margin-bottom: 1.5rem;" type="file" name="arq" id="arq" accept="image/*">
+          <form class="popup-form" action="php/enviar_tweet.php" method="post" enctype="multipart/form-data">
+            <textarea rows="5" cols="60" class="dashboard-button" name="corpo_tweet" style="width:300px; height:100px; cursor: text;" placeholder="Escreva seu tweet aqui"></textarea>
+            <input style="margin-bottom: 1.5rem;" type="file" name="foto" id="foto" accept="image/*">
             <button class="dashboard-button" type="submit">Tweetar</button>
           </form>
       </div>

@@ -11,6 +11,7 @@ if ($result->num_rows > 0) {
     // As credenciais são válidas, autenticar o usuário aqui
     $id_usuario = mysqli_fetch_assoc($result);
     session_start();
+    $id_usuario = $id_usuario['id'];
     $_SESSION['user_id'] = $id_usuario;
     header("Location: ../dashboard.php");
 } else {

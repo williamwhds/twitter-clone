@@ -1,7 +1,0 @@
-Antes de iniciar o projeto:
-Prepare o banco de dados com database/setup.sql
-Ajuste a conexão com o banco de dados em php/conexao_db.php
-
-A fazer:
-Mostrar pro usuário em index.php que a conta foi criada usando variável $_GET["criou"] (ver cadastrar.php)
-Autenticar o usuário em entrar.php

@@ -85,11 +85,12 @@
             <div class="sign-up-popup-content">
                 <span class="popup-close" id="popup-close">&times;</span>
                 <h2>Criar conta</h2>
-                <form action="./php/cadastrar.php" method="post">
+                <form action="./php/cadastrar.php" method="post" enctype="multipart/form-data">
                     <input type="text" class="name" name="name" id="name" placeholder="Nome">
                     <input type="text" class="username" name="username" id="username" placeholder="Nome de usuário">
                     <input type="text" class="username" name="email" id="email" placeholder="Email">
                     <input type="password" class="password" name="password" id="password" placeholder="Senha">
+                    <input class="username" type="file" name="foto" id="foto" accept="image/*">
                     <button type="submit" class="sign-up">Criar conta</button>
                 </form>
             </div>
