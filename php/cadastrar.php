@@ -9,7 +9,7 @@ $password = $_POST["password"];
 
 // Pegando foto
 if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] == 0) {
-  $nome_foto = 'perfil_' . $username . '_' . time() . '.jpg';
+  $nome_foto = 'perfil_' . $username . time() . '.jpg';
 
   // Diretório para salvar as imagens
   $diretorio_destino = '../arq/perfil/';
@@ -22,11 +22,11 @@ if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] == 0) {
 
   // Mover o arquivo para o diretório de destino
   if (!move_uploaded_file($_FILES["foto"]["tmp_name"], $caminho_arquivo)) {
-      header("Location: ../index.php?msg1=Erro&mgs2=Erro no upload da imagem. Por favor, tente novamente.");
+      header("Location: ../index.php?msg1=Erro&msg2=Erro no upload da imagem. Por favor, tente novamente.");
       exit;
   }
 } else {
-  header("Location: ../index.php?msg1=Erro&mgs2=Erro no upload da imagem. Por favor, tente novamente.");
+  header("Location: ../index.php?msg1=Erro&msg2=Erro no upload da imagem. Por favor, tente novamente.");
   exit;
 }
 

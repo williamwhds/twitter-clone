@@ -3,19 +3,23 @@
 require 'conexao_db.php';
 
 // Consulta para obter todos os tweets (sem limitação)
-$query = "SELECT * FROM tweets ORDER BY data_envio DESC";
+$query = "SELECT tweets.*, usuarios.url_imagem as imagem_perfil, usuarios.nome, usuarios.usuario
+          FROM tweets
+          JOIN usuarios ON tweets.usuario_id = usuarios.id
+          ORDER BY tweets.data_envio DESC";
+
 $result = mysqli_query($conn, $query);
 
 // Processar os resultados e incorporar no HTML
 if (mysqli_num_rows($result) > 0) {
     while ($tweet = mysqli_fetch_assoc($result)) {
         echo '<div class="tweet">';
-        echo '<img class="user-photo" src="' . substr($tweet['url_foto_usuario'], 3) . '" alt="User Photo">';
+        echo '<img class="user-photo" src="' . substr($tweet['imagem_perfil'], 3) . '" alt="User Photo">';
         echo '<div class="tweet-content">';
         echo '<div class="user-info">';
-        echo '<span>' . $tweet['nome'] . '</span>';
+        echo '<span>' . $tweet['nome'] . ' </span>';
         echo '<span>@' . $tweet['usuario'] . '</span>';
-        echo '<span>&#8226; ' . $tweet['data_envio'] . '</span>';
+        echo '<span> &#8226; ' . $tweet['data_envio'] . '</span>';
         echo '</div>';
         echo '<p>' . $tweet['corpo'] . '</p>';
         if ($tweet['url_imagem'] != null) { echo '<img class="tweet-image" src="' . substr($tweet['url_imagem'], 3) . '" alt="Tweet Image">';}
