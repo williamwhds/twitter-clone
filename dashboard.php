@@ -49,8 +49,21 @@
   <div id="right-sidebar">
     <h2>🕊️ Tweetar</h2>
     <ul style="padding-left: 0;">
-      <button class="dashboard-button">✉️ Enviar tweet</button>
+      <button class="dashboard-button" id="open-popup">✉️ Enviar tweet</button>
     </ul>
+
+    <div class="popup-front" id="popup-front">
+      <div class="popup-content">
+        <span class="popup-close" id="popup-close">&times;</span>
+        <h2>Tweetar</h2>
+          <form class="popup-form" action="./php/tweetar.php" method="post">
+            <textarea rows="5" cols="60" class="dashboard-button" style="width:300px; height:100px; cursor: text;" placeholder="Escreva seu tweet aqui"></textarea>
+            <input style="margin-bottom: 1.5rem;" type="file" name="arq" id="arq" accept="image/*">
+            <button class="dashboard-button" type="submit">Tweetar</button>
+          </form>
+      </div>
+    </div>
+    <script src="js/popup.js"></script>
 
     <h2>🔭 Usuários</h2>
     <ul style="padding-left: 0;">
