@@ -11,14 +11,12 @@ if ($result->num_rows > 0) {
     // As credenciais são válidas, autenticar o usuário aqui
     $id_usuario = mysqli_fetch_assoc($result);
     session_start();
-    $_SESSION['id_usuario'] = $result;
-    header('location: ../index.php'); // Dashboard
+    $_SESSION['user_id'] = $id_usuario;
+    header("Location: ../dashboard.php");
 } else {
     // Senha incorreta ou usuário não encontrado
     header('location: ../index.php?msg1=Credenciais incorretas&msg2=Usuário ou senha não coincidem!');
 }
 
-//session_start();
-//$_SESSION['id_usuario'] = $result;
 $conn->close();
 ?>
