@@ -61,7 +61,7 @@
         <div class="right">
             <div class="right-content">
                 <form action="./php/entrar.php" method="post" class="right-content-form">
-                    <input type="text" class="username" id="email" name="email" placeholder="Email">
+                    <input type="text" class="username" id="username" name="username" placeholder="Nome de usuário">
 
                     <div>
                         <input type="password" class="password" id="password" name="password" placeholder="Senha">
