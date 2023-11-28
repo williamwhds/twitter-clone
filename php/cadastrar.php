@@ -9,7 +9,7 @@ $password = $_POST["password"];
 
 // Pegando foto
 if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] == 0) {
-  $nome_foto = 'perfil_' . $username . time() . '.jpg';
+  $nome_foto = 'perfil_' . $username . "_" . time() . '.jpg';
 
   // Diretório para salvar as imagens
   $diretorio_destino = '../arq/perfil/';
