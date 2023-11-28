@@ -9,10 +9,10 @@ $sql = "SELECT id FROM usuarios WHERE usuario = '$email' AND senha = '$password'
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // As credenciais são válidas, autenticar o usuário aqui
-    $id_usuario = mysqli_fetch_assoc($result);
+    $row = mysqli_fetch_assoc($result);
     session_start();
-    $id_usuario = $id_usuario['id'];
-    $_SESSION['user_id'] = $id_usuario;
+    $_SESSION['user_id'] = $row['id'];
+    $_SESSION['username'] = $row['usuario'];
     header("Location: ../dashboard.php");
 } else {
     // Senha incorreta ou usuário não encontrado

@@ -14,7 +14,8 @@
     session_start();
     if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION['user_id'])) {
         // Obtém variáveis de sessão
-        $user_id = $_SESSION['user_id'];  
+        $user_id = $_SESSION['user_id'];
+        $username = $_SESSION['username'];
     } else {
         header("Location: index.php?msg1=Erro&msg2=Inicie sua sessão primeiro.");
     }
@@ -30,12 +31,16 @@
   <div id="left-sidebar">
     <img src="images/twitter-clone.png">
     <ul style="padding-left: 0;">
+        <a href='dashboard.php'>
+          <button class='dashboard-button'>🏠 Dashboard</button> 
+        </a>
+
         <button class='dashboard-button'>🧑 Meu Perfil</button>
         <button class='dashboard-button'>⚙️ Editar</button>
 
-        <form action='php/encerrar_sessao.php'>
+        <a href='php/encerrar_sessao.php'>
             <button class='dashboard-button'>🚪 Sair</button>
-        </form>
+        </a>
     </ul>
   </div>
 
