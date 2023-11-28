@@ -18,7 +18,7 @@ if (mysqli_num_rows($result) > 0) {
         echo '<div class="tweet-content">';
         echo '<div class="user-info">';
         echo '<span>' . $tweet['nome'] . ' </span>';
-        echo '<span>@' . $tweet['usuario'] . '</span>';
+        echo '<span>&#8226; @' . $tweet['usuario'] . '</span>';
         echo '<span> &#8226; ' . $tweet['data_envio'] . '</span>';
         echo '</div>';
         echo '<p>' . $tweet['corpo'] . '</p>';
