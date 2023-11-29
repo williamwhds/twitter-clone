@@ -35,8 +35,13 @@
           <button class='dashboard-button'>🏠 Dashboard</button> 
         </a>
 
-        <button class='dashboard-button'>🧑 Meu Perfil</button>
-        <button class='dashboard-button'>⚙️ Editar</button>
+        <a href='pesquisar.php?usr=<?php echo $_SESSION['username'] ?>'>
+          <button class='dashboard-button'>🧑 Meus tweets</button>
+        </a>
+
+        <a href='editar.php'>
+          <button class='dashboard-button'>⚙️ Editar perfil</button>
+        </a>
 
         <a href='php/encerrar_sessao.php'>
             <button class='dashboard-button'>🚪 Sair</button>
