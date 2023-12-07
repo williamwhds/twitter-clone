@@ -35,7 +35,7 @@
           <button class='dashboard-button'>🏠 Dashboard</button> 
         </a>
 
-        <a href='pesquisar.php?usr=<?php echo $_SESSION['username'] ?>'>
+        <a href='pesquisar.php?nome_pesquisar=<?php echo $_SESSION['username'] ?>'>
           <button class='dashboard-button'>🧑 Meus tweets</button>
         </a>
 
@@ -77,8 +77,10 @@
 
     <h2>🔭 Usuários</h2>
     <ul style="padding-left: 0;">
-      <input class="dashboard-button" placeholder="@usuario" style="cursor: text;">
-      <button class='dashboard-button'>🔎 Pesquisar</button>
+      <form action="pesquisar.php" method="post">
+        <input class="dashboard-button" placeholder="@usuario" name="nome_pesquisar" style="cursor: text;">
+        <button class='dashboard-button'>🔎 Pesquisar</button>
+      </form>
     </ul>
   </div>
 </div>

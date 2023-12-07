@@ -11,7 +11,7 @@ if ($result->num_rows > 0) {
     $row = mysqli_fetch_assoc($result);
     session_start();
     $_SESSION['user_id'] = $row['id'];
-    $_SESSION['username'] = $row['usuario'];
+    $_SESSION['username'] = $username;
     header("Location: ../dashboard.php");
 } else {
     // Senha incorreta ou usuário não encontrado
